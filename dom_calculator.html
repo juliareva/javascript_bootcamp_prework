@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <form>
+        <label for="num1">Number 1:</label>
+        <input type="text" name="num1" id="num1" required>
+        <br>
+        <label for="num2">Number 2:</label>
+        <input type="text" name="num2" id="num2" required>
+        <br>
+        <input type="button" id="button" onclick="calculate()" value="Calculate">
+    </form>
+    <p id="result"></p>
+
+<style>
+    form {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        background-color: #e1e1e1;
+        max-width: 30%;
+        margin: 20px;
+        padding: 20px 30px;
+    }
+
+    label {
+        margin-right: 10px;
+    }
+    
+    input {
+        background-color: #fff;
+        padding: 10px;
+        margin-bottom: 10px; 
+        border-radius: 5px;
+        border: 1px solid rgb(169, 169, 169);
+    }
+
+    #button {
+        font-size: 16px;
+        margin: 10px;
+        padding: 10px 25px; 
+        background-color: rgb(77, 77, 77);
+        color: #fff;
+    }
+
+    #result {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        margin: 20px;
+        color: #111;  
+    }
+</style>    
+
+<script>
+    function calculate() {
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+        document.getElementById("result").innerHTML = "Result is: " + (Number(num1) + Number(num2));
+}
+</script>
+</body>
+</html>
